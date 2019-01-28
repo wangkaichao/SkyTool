@@ -34,7 +34,8 @@ public:
         uint8_t startSN[32];              ///< 260-291
         uint8_t endSN[32];                ///< 292-323
         uint32_t mandatory : 1;           ///< 324-327
-        uint32_t unused2 : 31;
+        uint32_t unused2 : 15;
+		uint32_t upPid : 16;
         uint32_t crc32;                   ///< 328-331
     } sky_up_info_section_t;
 

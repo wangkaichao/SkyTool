@@ -146,8 +146,8 @@ uint32_t clsTable::createUpInfoSection()
     pos += sizeof(p->endSN);
     m_upInfoSection[pos++] = ((m_upInfo->mandatory() ? 1 : 0) << 7) | 0x7f;
     m_upInfoSection[pos++] = 0xff;
-    m_upInfoSection[pos++] = 0xff;
-    m_upInfoSection[pos++] = 0xff;
+	m_upInfoSection[pos++] = (m_upInfo->dataPid() >> 8) & 0xff; //0xff;
+	m_upInfoSection[pos++] = m_upInfo->dataPid() & 0xff; //0xff;
 
     // -3£¨tab_id + len£© + 4(crc32)
     uint8_t h = (pos - 3 + 4) >> 8;

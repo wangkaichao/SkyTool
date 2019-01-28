@@ -82,12 +82,12 @@ bool CSkyUpToolDlg::initCtl()
     //升级文本只能选择，不能手动输入
     m_inFileEdt.EnableWindow(0);
 
-    m_manufactureIdEdt.SetWindowTextA("0");
+    m_manufactureIdEdt.SetWindowTextA("18");
     m_hardVerEdt.SetWindowTextA("0");
     m_hardModEdt.SetWindowTextA("0");
     m_softVerEdt.SetWindowTextA("0");
     m_softModEdt.SetWindowTextA("0");
-    m_softDependVerEdt.SetWindowTextA("0");
+    m_softDependVerEdt.SetWindowTextA("1");
 
     m_startSnEdt.SetWindowTextA("0");
     m_endSnEdt.SetWindowTextA("0");
